@@ -1,24 +1,223 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="meD-XL-HKx">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Anasayfa-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="Anasayfa" customModule="ToDoList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="pqf-3H-Yw0">
+                                <rect key="frame" x="0.0" y="200" width="393" height="569"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="gorevlerHucre" id="oHP-pn-rUf" customClass="gorevlerHucre" customModule="ToDoList" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="32"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oHP-pn-rUf" id="UG2-Iv-KNq">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="32"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Dl1-yo-hWH">
+                                                    <rect key="frame" x="0.0" y="0.0" width="80.666666666666671" height="12"/>
+                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="gorev aciklamasi" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7tb-Bn-Fc1">
+                                                    <rect key="frame" x="128" y="0.0" width="153" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="153" id="10C-Vo-nwN"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Gorev" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xly-BD-Sdb">
+                                                    <rect key="frame" x="45" y="5" width="49" height="32"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="49" id="x64-Aa-Nu9"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="xly-BD-Sdb" firstAttribute="leading" secondItem="UG2-Iv-KNq" secondAttribute="leadingMargin" constant="25" id="2Dv-ey-zTr"/>
+                                                <constraint firstItem="Dl1-yo-hWH" firstAttribute="leading" secondItem="UG2-Iv-KNq" secondAttribute="leadingMargin" constant="-20" id="9Ua-ru-S6f"/>
+                                                <constraint firstItem="7tb-Bn-Fc1" firstAttribute="leading" secondItem="Dl1-yo-hWH" secondAttribute="trailing" constant="47.333333333333329" id="A2l-oQ-9xz"/>
+                                                <constraint firstItem="Dl1-yo-hWH" firstAttribute="top" secondItem="UG2-Iv-KNq" secondAttribute="topMargin" constant="-11" id="GgC-RM-s5k"/>
+                                                <constraint firstItem="xly-BD-Sdb" firstAttribute="top" secondItem="UG2-Iv-KNq" secondAttribute="topMargin" constant="-6" id="NVL-rG-Zmh"/>
+                                                <constraint firstItem="7tb-Bn-Fc1" firstAttribute="leading" secondItem="xly-BD-Sdb" secondAttribute="trailing" constant="34" id="Pra-D3-F6j"/>
+                                                <constraint firstItem="Dl1-yo-hWH" firstAttribute="top" secondItem="7tb-Bn-Fc1" secondAttribute="top" id="YW9-ig-Usl"/>
+                                                <constraint firstItem="7tb-Bn-Fc1" firstAttribute="centerY" secondItem="UG2-Iv-KNq" secondAttribute="centerY" id="Yzr-GV-etC"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Dl1-yo-hWH" secondAttribute="bottom" constant="20.666667938232422" id="heM-tx-jw7"/>
+                                                <constraint firstItem="xly-BD-Sdb" firstAttribute="centerY" secondItem="UG2-Iv-KNq" secondAttribute="centerY" id="uSH-6O-3Jp"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="labelAciklamasi" destination="7tb-Bn-Fc1" id="SUH-iN-HAa"/>
+                                            <outlet property="labelGorev" destination="xly-BD-Sdb" id="wTq-dP-4BE"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="bmW-fW-Bu3">
+                                <rect key="frame" x="0.0" y="134" width="393" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Cfl-rM-gsT"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bmW-fW-Bu3" firstAttribute="trailing" secondItem="pqf-3H-Yw0" secondAttribute="trailing" id="6LZ-0e-X4F"/>
+                            <constraint firstItem="bmW-fW-Bu3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FyA-mE-P5J"/>
+                            <constraint firstItem="pqf-3H-Yw0" firstAttribute="top" secondItem="bmW-fW-Bu3" secondAttribute="bottom" constant="10" id="GYn-la-zxE"/>
+                            <constraint firstItem="bmW-fW-Bu3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="31" id="HCi-Z4-rUG"/>
+                            <constraint firstItem="pqf-3H-Yw0" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="UEY-Bt-hS4"/>
+                            <constraint firstItem="bmW-fW-Bu3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dbH-KR-ulg"/>
+                            <constraint firstItem="bmW-fW-Bu3" firstAttribute="leading" secondItem="pqf-3H-Yw0" secondAttribute="leading" id="tJw-8R-YFe"/>
+                        </constraints>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="K7z-j5-exk">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="OM8-aw-fI3">
+                            <connections>
+                                <segue destination="OAQ-6n-cXy" kind="show" id="DAD-cx-Doq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="searchBar" destination="bmW-fW-Bu3" id="Zsh-Xq-4Kn"/>
+                        <outlet property="tableView" destination="pqf-3H-Yw0" id="dUq-PT-Ul4"/>
+                        <segue destination="VWl-00-QF5" kind="show" identifier="toDetay" id="cMx-JH-rqh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="898.47328244274809" y="-27.464788732394368"/>
+        </scene>
+        <!--GÖREV DETAY-->
+        <scene sceneID="WGk-ES-YT0">
+            <objects>
+                <viewController id="VWl-00-QF5" customClass="gorevDetay" customModule="ToDoList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hb5-bs-Qi2">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rh7-RJ-gkw">
+                                <rect key="frame" x="79" y="379" width="110.33333333333331" height="37"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="GÜNCELLE"/>
+                                <connections>
+                                    <action selector="guncelleButonu:" destination="VWl-00-QF5" eventType="touchUpInside" id="zab-zd-tma"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kvb-U7-z6G">
+                                <rect key="frame" x="35" y="281" width="319" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="rbj-0g-zxJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nmB-J0-jKb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Kvb-U7-z6G" firstAttribute="top" secondItem="nmB-J0-jKb" secondAttribute="top" constant="178" id="1z2-h8-ehv"/>
+                            <constraint firstItem="nmB-J0-jKb" firstAttribute="bottom" secondItem="rh7-RJ-gkw" secondAttribute="bottom" constant="353" id="9xy-cH-0MJ"/>
+                            <constraint firstItem="Kvb-U7-z6G" firstAttribute="leading" secondItem="nmB-J0-jKb" secondAttribute="leading" constant="35" id="DNi-1q-0e2"/>
+                            <constraint firstItem="rh7-RJ-gkw" firstAttribute="leading" secondItem="nmB-J0-jKb" secondAttribute="leading" constant="79" id="Lxb-jT-FDh"/>
+                            <constraint firstItem="nmB-J0-jKb" firstAttribute="trailing" secondItem="Kvb-U7-z6G" secondAttribute="trailing" constant="39" id="PMO-P6-Rw8"/>
+                            <constraint firstItem="rh7-RJ-gkw" firstAttribute="top" secondItem="Kvb-U7-z6G" secondAttribute="bottom" constant="64" id="tXy-LX-pqH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="GÖREV DETAY" id="OuJ-SP-gts"/>
+                    <connections>
+                        <outlet property="gorev" destination="Kvb-U7-z6G" id="uPX-8Y-i6s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dAj-ae-bdc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1742.7480916030534" y="581.69014084507046"/>
+        </scene>
+        <!--GÖREV KAYIT-->
+        <scene sceneID="8n3-3b-5F5">
+            <objects>
+                <viewController id="OAQ-6n-cXy" customClass="gorevKayit" customModule="ToDoList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QsS-ej-1nn">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Myx-Qd-1QM">
+                                <rect key="frame" x="96" y="409.66666666666669" width="87.333333333333314" height="34.333333333333314"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="KAYDET"/>
+                                <connections>
+                                    <action selector="kaydetButonu:" destination="OAQ-6n-cXy" eventType="touchUpInside" id="Gbh-FU-paw"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YRB-yz-hLn">
+                                <rect key="frame" x="51" y="320.66666666666669" width="287" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="a0q-h2-KtP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="a0q-h2-KtP" firstAttribute="trailing" secondItem="YRB-yz-hLn" secondAttribute="trailing" constant="55" id="4K5-vu-fWn"/>
+                            <constraint firstItem="YRB-yz-hLn" firstAttribute="leading" secondItem="a0q-h2-KtP" secondAttribute="leading" constant="51" id="JuW-89-rDe"/>
+                            <constraint firstItem="YRB-yz-hLn" firstAttribute="top" secondItem="a0q-h2-KtP" secondAttribute="top" constant="217.66666666666669" id="Ljm-xt-WHv"/>
+                            <constraint firstItem="Myx-Qd-1QM" firstAttribute="centerY" secondItem="QsS-ej-1nn" secondAttribute="centerY" id="nLR-ch-n4p"/>
+                            <constraint firstItem="a0q-h2-KtP" firstAttribute="bottom" secondItem="Myx-Qd-1QM" secondAttribute="bottom" constant="373.99999999999994" id="rRP-I3-wSN"/>
+                            <constraint firstItem="Myx-Qd-1QM" firstAttribute="leading" secondItem="a0q-h2-KtP" secondAttribute="leading" constant="96" id="u5h-49-lDn"/>
+                            <constraint firstItem="Myx-Qd-1QM" firstAttribute="top" secondItem="YRB-yz-hLn" secondAttribute="bottom" constant="55.000000000000057" id="y6K-Lk-o9S"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="GÖREV KAYIT" id="2Q8-ly-kZ8"/>
+                    <connections>
+                        <outlet property="gorev" destination="YRB-yz-hLn" id="d8v-zK-iOz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c3P-hS-zRY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1748.854961832061" y="-333.0985915492958"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bAB-9f-eLZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="meD-XL-HKx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WL2-z8-gkJ">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ujK-rU-wNg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0xq-Hi-KuZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-28.244274809160306" y="-27.464788732394368"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
